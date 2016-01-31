@@ -13,7 +13,7 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-<!-- 			<plugin>
+			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<version>1.8</version>
 				<executions>
@@ -23,7 +23,7 @@
 							<target>
 								<copy
 									file="${project.build.directory}/${project.build.finalName}.jar"
-									todir="/Users/marisusis/Desktop/spigottest/plugins" />
+									todir="../server/plugins" />
 							</target>
 						</configuration>
 						<goals>
@@ -31,7 +31,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin>
 		</plugins>
 	</build>
 	<repositories>
