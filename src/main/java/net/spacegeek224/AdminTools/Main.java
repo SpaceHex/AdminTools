@@ -13,7 +13,9 @@ public class Main extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
+		getServer().getPluginManager().registerEvents(this, this);  
 		getLogger().info(ChatColor.GREEN + "Plugin enabled!");
+		getCommand("help").setExecutor(new CommandHelp()); 
 	}
 	
 	@Override
@@ -28,24 +30,19 @@ public class Main extends JavaPlugin {
                                         .registerEvents(listener, plugin);                                               
                 }                                                                                                        
         } 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if(commandLabel.equalsIgnoreCase("help")) {
+//     @Override
+//     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+//         if(commandLabel.equalsIgnoreCase("help")) {
 		
-            //Defines Variables
-//             Player p = (Player) sender;
+//             //Defines Variables
+// //             Player p = (Player) sender;
 
-            //Send message
-            sender.sendMessage(ChatColor.GOLD + "SpaceHex Network");
-            sender.sendMessage(ChatColor.WHITE + "====================================================");
-            sender.sendMessage(ChatColor.AQUA + "/help" + ChatColor.WHITE + " - Displays help.");
-            sender.sendMessage(ChatColor.AQUA + "/hub" + ChatColor.WHITE + " - Go to the hub.");
-	    sender.sendMessage(ChatColor.AQUA + "/report <player> <reason>" + ChatColor.WHITE + " - File a report.");
-            sender.sendMessage(ChatColor.GRAY + "====================================================");
-        } else if(commandLabel.equalsIgnoreCase("report")) {
-		//report command logic
-        }
-        return false;
-    }
+//             //Send message
+            
+//         } else if(commandLabel.equalsIgnoreCase("report")) {
+// 		//report command logic
+//         }
+//         return false;
+//     }
 	
 }
