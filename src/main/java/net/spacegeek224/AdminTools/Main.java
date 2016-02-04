@@ -20,6 +20,14 @@ public class Main extends JavaPlugin {
 	public void onDisable() {
 		getLogger().info(ChatColor.RED + "Plugin disabled!");
 	}
+	
+	public static void registerEvents(org.bukkit.plugin.Plugin plugin,                                               
+                        Listener... listeners) {                                                                         
+                for (Listener listener : listeners) {                                                                    
+                        Bukkit.getServer().getPluginManager()                                                            
+                                        .registerEvents(listener, plugin);                                               
+                }                                                                                                        
+        } 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if(commandLabel.equalsIgnoreCase("help")) {
