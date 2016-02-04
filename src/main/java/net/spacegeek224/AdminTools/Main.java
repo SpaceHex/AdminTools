@@ -30,7 +30,9 @@ public class Main extends JavaPlugin {
             //Send message
             sender.sendMessage(ChatColor.GOLD + "SpaceHex Network");
             sender.sendMessage(ChatColor.WHITE + "====================================================");
-            sender.sendMessage(ChatColor.AQUA + "/help" + ChatColor.WHITE + " - Displays help");
+            sender.sendMessage(ChatColor.AQUA + "/help" + ChatColor.WHITE + " - Displays help.");
+            sender.sendMessage(ChatColor.AQUA + "/hub" + ChatColor.WHITE + " - Go to the hub.");
+	            sender.sendMessage(ChatColor.AQUA + "/report <player>" + ChatColor.WHITE + " - File a report.");
             sender.sendMessage(ChatColor.GRAY + "====================================================");
         }
         return false;
