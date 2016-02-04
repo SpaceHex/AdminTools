@@ -4,6 +4,14 @@ version: 1.0.0
 author: spacegeek224
 commands:
   help:
-    description: A command
-    usage: /help
-    permission: plugin.commamd
+    description: Get help
+    usage: /help [topic]
+    permission: shn.help
+  report:
+    description: Report a player.
+    usage: /report <player> <reason>
+    permission: shn.report
+  hub:
+    description: Go to the hub.
+    usage: /hub
+    permission: shn.hub
