@@ -16,9 +16,10 @@ public class CommandHelp implements CommandExecutor {
                 sender.sendMessage(ChatColor.WHITE + "====================================================");
                 sender.sendMessage(ChatColor.BLUE + "/help" + ChatColor.YELLOW + " - Displays help.");
                 sender.sendMessage(ChatColor.BLUE + "/hub" + ChatColor.YELLOW + " - Go to the hub.");
-	        sender.sendMessage(ChatColor.BLUE + "/report <player> <reason>" + ChatColor.YELLOW + " - File a report.");
+	        sender.sendMessage(ChatColor.BLUE + "/report <player> <reason>" + ChatColor.YELLOW + " - Report a player.");
+	        sender.sendMessage(ChatColor.BLUE + "/bug <description>" + ChatColor.YELLOW + " - File a bug report.");
                 sender.sendMessage(ChatColor.WHITE + "====================================================");
-                return false;                                                                                            
+                return true;                                                                                            
         }                                                                                                                
                                                                                                                          
 }  
