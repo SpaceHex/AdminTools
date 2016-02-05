@@ -20,8 +20,6 @@ public class CommandBug implements CommandExecutor {
 			for (int i = 0; i < args.length; i++) {
 				buffer.append(' ').append(args[i]);
 			}
-
-			Bukkit.getLogger().info(buffer.toString());
 			if (sender instanceof Player) {
 				Player player = (Player) sender;
 				sender.sendMessage(ChatColor.YELLOW + "Your bug report has been submitted.");
