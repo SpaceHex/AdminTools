@@ -24,6 +24,7 @@ public class CommandBug implements CommandExecutor {
 			Bukkit.getLogger().info(buffer.toString());
 			if (sender instanceof Player) {
 				Player player = (Player) sender;
+				sender.sendMessage(ChatColor.YELLOW + "Your bug report has been submitted.");
 			} if (sender instanceof ConsoleCommandSender) {
 			  
 			}
