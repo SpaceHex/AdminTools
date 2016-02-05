@@ -39,7 +39,7 @@ public class CommandReport implements CommandExecutor {
 						+ buffer.toString() + ChatColor.YELLOW + "!");
 			}
 		}
-		return false;
+		return true;
 	}
 
 	public void helpMessage(CommandSender s) {
