@@ -11,14 +11,16 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 public class Main extends JavaPlugin implements Listener {
-	
+	public FileConfiguration config = getConfig();
+
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);  
+		config.addDefault("server-name","My Server");
 		getLogger().info(ChatColor.GREEN + "Plugin enabled!");
 		getCommand("help").setExecutor(new CommandHelp()); 
 		getCommand("report").setExecutor(new CommandReport()); 
-		getCommand("bug").setExecutor(new CommandBug()); 
+		getCommand("bug").setExecutor(new CommandBug());
 	}
 	
 	@Override
