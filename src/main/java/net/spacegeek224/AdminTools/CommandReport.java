@@ -14,9 +14,9 @@ public class CommandReport implements CommandExecutor {
 			String[] args) {
 
 		if (args.length == 0) {
-			helpMessage();
+			helpMessage(sender);
 		} else if (args.length == 1) {
-			helpMessage();
+			helpMessage(sender);
 		} else if (args.length >= 2) {
 
 			StringBuilder buffer = new StringBuilder();
@@ -33,7 +33,7 @@ public class CommandReport implements CommandExecutor {
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
 						+ buffer.toString() + ChatColor.YELLOW + "!");
 			} if (sender instanceof ConsoleCommandSender) {
-				Bukkit.broadcastMessage(ChatColor.GREEN + "Console "
+				Bukkit.broadcastMessage(ChatColor.GREEN + "Console"
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
 						+ buffer.toString() + ChatColor.YELLOW + "!");
@@ -42,7 +42,7 @@ public class CommandReport implements CommandExecutor {
 		return false;
 	}
 
-	public void helpMessage() {
-
+	public void helpMessage(s) {
+		s.sendMessage(ChatColor.RED + "Usage: /report <player> <message>");
 	}
 }
