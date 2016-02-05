@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.CouloredConsoleSender;
 import org.bukkit.entity.Player;
 
 public class CommandReport implements CommandExecutor {
@@ -19,9 +20,6 @@ public class CommandReport implements CommandExecutor {
 		} else if (args.length >= 2) {
 
 			StringBuilder buffer = new StringBuilder();
-
-			// change the starting i value to pick what argument to start from
-			// 1 is the 2nd argument.
 			for (int i = 1; i < args.length; i++) {
 				buffer.append(' ').append(args[i]);
 			}
@@ -31,6 +29,11 @@ public class CommandReport implements CommandExecutor {
 				Player player = (Player) sender;
 				Bukkit.broadcastMessage(ChatColor.YELLOW + "Player "
 						+ ChatColor.GREEN + player.getDisplayName()
+						+ ChatColor.YELLOW + " reported " + ChatColor.RED
+						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
+						+ buffer.toString() + ChatColor.YELLOW + "!");
+			} if (sender instanceof ColouredConsoleSender) {
+				Bukkit.broadcastMessage(ChatColor.GREEN + "Console "
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
 						+ buffer.toString() + ChatColor.YELLOW + "!");
