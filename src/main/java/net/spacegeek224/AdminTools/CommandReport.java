@@ -5,7 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.CouloredConsoleSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class CommandReport implements CommandExecutor {
@@ -32,7 +32,7 @@ public class CommandReport implements CommandExecutor {
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
 						+ buffer.toString() + ChatColor.YELLOW + "!");
-			} if (sender instanceof ColouredConsoleSender) {
+			} if (sender instanceof ConsoleCommandSender) {
 				Bukkit.broadcastMessage(ChatColor.GREEN + "Console "
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
