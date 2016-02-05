@@ -20,6 +20,18 @@ public class CommandHelp implements CommandExecutor {
 		        sender.sendMessage(ChatColor.BLUE + "/report <player> <reason>" + ChatColor.YELLOW + " - Report a player.");
 		        sender.sendMessage(ChatColor.BLUE + "/bug <description>" + ChatColor.YELLOW + " - File a bug report.");
 	                sender.sendMessage(ChatColor.WHITE + "====================================================");
+                } else if (args.length == 1) {
+                	switch (args[0]) {
+                		case "reporting":
+                			sender.sendMessage(ChatColor.GOLD + "SpaceHex Network -" + ChatColor.BLUE + "Reporting");
+	                		sender.sendMessage(ChatColor.WHITE + "====================================================");
+	                		sender.sendMessage(ChatColor.YELLOW + "Use the " + ChatColor.BLUE + "/report " + ChatColor.YELLOW + "command when you");
+	                		sender.sendMessage(ChatColor.YELLOW + "need to report a player that is breaking the rules.");
+                			sender.sendMessage(ChatColor.WHITE + "====================================================");
+                			break;
+        			default:
+        				sender.sendMessage(ChatColor.RED + "Unknown help topic.");
+                	}
                 }
                 return true;                                                                                            
         }                                                                                                                
