@@ -42,7 +42,7 @@ public class CommandReport implements CommandExecutor {
 		return false;
 	}
 
-	public void helpMessage(s) {
+	public void helpMessage(CommandSender s) {
 		s.sendMessage(ChatColor.RED + "Usage: /report <player> <message>");
 	}
 }
