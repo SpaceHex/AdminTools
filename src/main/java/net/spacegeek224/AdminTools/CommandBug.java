@@ -28,7 +28,7 @@ public class CommandBug implements CommandExecutor {
 			  
 			}
 		}
-		return false;
+		return true;
 	}
 
 	public void helpMessage(CommandSender s) {
