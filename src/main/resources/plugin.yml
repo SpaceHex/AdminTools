@@ -15,3 +15,7 @@ commands:
     description: Go to the hub.
     usage: /hub
     permission: shn.hub
+  bug:
+    description: File a bug report.
+    usage: /bug <description>
+    permission: shn.bug
