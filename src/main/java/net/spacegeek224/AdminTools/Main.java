@@ -18,6 +18,8 @@ public class Main extends JavaPlugin implements Listener {
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);  
 		config.addDefault("server-name","My Server");
+		config.options().copyDefaults(true);
+		saveConfig();
 		getLogger().info(ChatColor.GREEN + "Plugin enabled!");
 		getCommand("help").setExecutor(new CommandHelp()); 
 		getCommand("report").setExecutor(new CommandReport()); 
