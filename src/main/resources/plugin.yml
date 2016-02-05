@@ -1,6 +1,6 @@
 name: AdminTools
 main: net.spacegeek224.AdminTools.Main
-version: 1.0.0
+version: 0.0.5
 author: spacegeek224
 commands:
   help:

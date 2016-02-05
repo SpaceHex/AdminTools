@@ -17,6 +17,7 @@ public class Main extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(this, this);  
 		getLogger().info(ChatColor.GREEN + "Plugin enabled!");
 		getCommand("help").setExecutor(new CommandHelp()); 
+		getCommand("report").setExecutor(new CommandReport()); 
 	}
 	
 	@Override
