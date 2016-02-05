@@ -24,19 +24,18 @@ public class CommandReport implements CommandExecutor {
 				buffer.append(' ').append(args[i]);
 			}
 
-			Bukkit.getLogger().info(buffer.toString());
 			if (sender instanceof Player) {
 				Player player = (Player) sender;
-				Bukkit.broadcastMessage(ChatColor.YELLOW + "Player "
+				Bukkit.getLogger().info(ChatColor.YELLOW + "Player "
 						+ ChatColor.GREEN + player.getDisplayName()
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
-						+ buffer.toString() + ChatColor.YELLOW + "!");
+						+ buffer.toString() + ChatColor.YELLOW + ".");
 			} if (sender instanceof ConsoleCommandSender) {
-				Bukkit.broadcastMessage(ChatColor.GREEN + "Console"
+				Bukkit.getLogger().info(ChatColor.GREEN + "Console"
 						+ ChatColor.YELLOW + " reported " + ChatColor.RED
 						+ args[0] + ChatColor.YELLOW + ", for" + ChatColor.RED
-						+ buffer.toString() + ChatColor.YELLOW + "!");
+						+ buffer.toString() + ChatColor.YELLOW + ".");
 			}
 		}
 		return true;
