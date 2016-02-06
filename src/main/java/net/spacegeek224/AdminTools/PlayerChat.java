@@ -20,6 +20,7 @@ public class PlayerChat implements Listener {
   @EventHandler
   public void onPlayerChat(AsyncPlayerChatEvent event) {
     String msg = event.getMessage();
+    event.setMessage(msg.replace("fuck","****"));
     Bukkit.getLogger().info(ChatColor.GOLD + msg);
   }
 }
