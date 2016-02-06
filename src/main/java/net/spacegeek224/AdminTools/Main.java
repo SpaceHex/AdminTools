@@ -17,7 +17,7 @@ public class Main extends JavaPlugin implements Listener {
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this); 
-		regesterEvents(this,new PlayerChat());
+		registerEvents(this,new PlayerChat());
 		config.addDefault("server-name","My Server");
 		config.options().copyDefaults(true);
 		saveConfig();
