@@ -32,16 +32,12 @@ public class PlayerChat implements Listener {
       }
     }
    event.setCancelled(true);
-   if (player.hasPermission("rank.admin")) {
-    Bukkit.broadcastMessage(ChatColor.RED + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
-   } else if (player.hasPermission("rank.mod")) {
-    Bukkit.broadcastMessage(ChatColor.GREEN + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
-   } else if (player.hasPermission("rank.helper")) {
-    Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
-   } else if (player.hasPermission("rank.vip")) {
-    Bukkit.broadcastMessage(ChatColor.GREEN + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   if (!player.hasPermission("rank.admin")) {
+    Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + msg);
+   } else if (player.hasPermission("rank.admin")) {
+     Bukkit.broadcastMessage(ChatColor.RED + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
    } else {
-     Bukkit.broadcastMessage(ChatColor.GRAY + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+     Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + msg);
    }
    
   }
