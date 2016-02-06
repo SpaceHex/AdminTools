@@ -32,4 +32,12 @@ public class PlayerChat implements Listener {
   }
     Bukkit.getLogger().info(ChatColor.GOLD + msg);
   }
+  public String toBleep(String s) {
+    int len = s.length();
+    StringBuilder sb = new StringBuilder(len);
+    for(int i = =; i < len; i++){
+        sb.append('*');
+    }
+    return sb.toString();
+  }
 }
