@@ -29,14 +29,13 @@ public class PlayerChat implements Listener {
       } else {
         // The current swear word was not found in the message.
       }
-  }
-    Bukkit.getLogger().info(ChatColor.GOLD + msg);
+    }
   }
   public String toBleep(String s) {
     int len = s.length();
     StringBuilder sb = new StringBuilder(len);
     for(int i = 0; i < len; i++){
-        sb.append('*');
+      sb.append('*');
     }
     return sb.toString();
   }
