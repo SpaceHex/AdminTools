@@ -20,16 +20,19 @@ public class PlayerChat implements Listener {
   @EventHandler
   public void onPlayerChat(AsyncPlayerChatEvent event) {
     String msg = event.getMessage();
+    Player player = event.getPlayer();
     String[] swearWords = {"fuck","ass","bitch"};
     String message = event.getMessage().toLowerCase().replaceAll("@", "a").replaceAll("\\p{Punct}", " ");
     for(String word : swearWords){
       if(message.matches("(.* )?"+word+"( .*)?")) {
         // There has been a swear word in the message
-        event.setMessage(event.getMessage().replaceAll(word, toBleep(word)));
+        msg = msg.replaceAll(word, toBleep(word));
       } else {
         // The current swear word was not found in the message.
       }
     }
+   event.setCancelled(true);
+   Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
   }
   public String toBleep(String s) {
     int len = s.length();
