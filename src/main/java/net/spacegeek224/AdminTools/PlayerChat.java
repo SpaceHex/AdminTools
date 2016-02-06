@@ -41,7 +41,7 @@ public class PlayerChat implements Listener {
    } else if (player.hasPermission("rank.vip")) {
     Bukkit.broadcastMessage(ChatColor.GREEN + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
    } else {
-     Bukkit.broadcastMessage(ChatColor.GREY + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+     Bukkit.broadcastMessage(ChatColor.GRAY + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
    }
    
   }
