@@ -21,6 +21,7 @@ public class PlayerChat implements Listener {
   public void onPlayerChat(AsyncPlayerChatEvent event) {
     String msg = event.getMessage();
     String[] swearWords = {"fuck","ass","bitch"};
+    String message = event.getMessage().toLowerCase().replaceAll("@", "a").replaceAll("\\p{Punct}", " ");
     for(String word : swearWords){
       if(message.matches("(.* )?"+word+"( .*)?")) {
         // There has been a swear word in the message
