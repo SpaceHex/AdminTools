@@ -32,7 +32,7 @@ public class PlayerChat implements Listener {
       }
     }
    event.setCancelled(true);
-   Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + msg);
   }
   public String toBleep(String s) {
     int len = s.length();
