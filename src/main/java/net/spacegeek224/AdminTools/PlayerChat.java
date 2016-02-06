@@ -25,7 +25,7 @@ public class PlayerChat implements Listener {
     for(String word : swearWords){
       if(message.matches("(.* )?"+word+"( .*)?")) {
         // There has been a swear word in the message
-        event.setMessage(event.getMessage().replaceAll(word, "*censored*"));
+        event.setMessage(event.getMessage().replaceAll(word, toBleep(word)));
       } else {
         // The current swear word was not found in the message.
       }
