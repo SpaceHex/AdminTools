@@ -32,7 +32,18 @@ public class PlayerChat implements Listener {
       }
     }
    event.setCancelled(true);
-   Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + msg);
+   if (player.hasPermission("rank.admin")) {
+    Bukkit.broadcastMessage(ChatColor.RED + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   } else if (player.hasPermission("rank.mod")) {
+    Bukkit.broadcastMessage(ChatColor.GREEN + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   } else if (player.hasPermission("rank.helper")) {
+    Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   } else if (player.hasPermission("rank.vip")) {
+    Bukkit.broadcastMessage(ChatColor.GREEN + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   } else {
+     Bukkit.broadcastMessage(ChatColor.GREY + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
+   }
+   
   }
   public String toBleep(String s) {
     int len = s.length();
