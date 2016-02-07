@@ -11,10 +11,10 @@ commands:
     description: Report a player.
     usage: /report <player> <reason>
     permission: shn.report
-  hub:
-    description: Go to the hub.
-    usage: /hub
-    permission: shn.hub
+  shout:
+    description: Shout something.
+    usage: /shout <message>
+    permission: shn.shout
   bug:
     description: File a bug report.
     usage: /bug <description>
