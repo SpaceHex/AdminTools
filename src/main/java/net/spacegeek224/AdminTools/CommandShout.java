@@ -21,7 +21,11 @@ public class CommandShout implements CommandExecutor {
                 if (args.length == 0) {
 	                
                 } else if (args.length >= 1) {
-                	
+                	StringBuilder buffer = new StringBuilder();
+			for (int i = 1; i < args.length; i++) {
+				buffer.append(' ').append(args[i]);
+			}
+			Bukkit.broadcastMessage(name + buffer.toString())
                 }
                 return true;                                                                                            
         }                                                                                                                
