@@ -1,12 +1,14 @@
-package net.spacegeek224.AdminTools;                                                                                     
-                                                                                                                         
+package net.spacegeek224.AdminTools;
+
 import org.bukkit.Bukkit;                                                                                                
 import org.bukkit.ChatColor;                                                                                             
 import org.bukkit.command.Command;                                                                                       
 import org.bukkit.command.CommandExecutor;                                                                               
-import org.bukkit.command.CommandSender;                                                                                 
-import org.bukkit.entity.Player;                                                                                         
-                                                                                                                         
+import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
+import net.spacegeek224.hexlib.ColoredString;
+
 public class CommandShout implements CommandExecutor {                                                                    
         @Override                                                                                                        
         public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {                       
@@ -25,9 +27,9 @@ public class CommandShout implements CommandExecutor {
 			for (int i = 1; i < args.length; i++) {
 				buffer.append(' ').append(args[i]);
 			}
-			Bukkit.broadcastMessage(name + buffer.toString());
+			Bukkit.broadcastMessage(name + new ColoredString(buffer.toString()).res);
                 }
                 return true;                                                                                            
-        }                                                                                                                
-                                                                                                                         
+        }
+        
 }  
