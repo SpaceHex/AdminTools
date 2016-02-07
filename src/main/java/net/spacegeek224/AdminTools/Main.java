@@ -10,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.configuration.file.FileConfiguration;
+import net.spacegeek224.hexlib.ColoredString;
 
 public class Main extends JavaPlugin implements Listener {
 	public FileConfiguration config = getConfig();
@@ -21,7 +22,9 @@ public class Main extends JavaPlugin implements Listener {
 		config.addDefault("server-name","My Server");
 		config.options().copyDefaults(true);
 		saveConfig();
+		ColoredString cs = new ColoredString("&9Hello");
 		getLogger().info(ChatColor.GREEN + "Plugin enabled!");
+		getLogger().info(cs.res);
 		getCommand("help").setExecutor(new CommandHelp()); 
 		getCommand("report").setExecutor(new CommandReport()); 
 		getCommand("bug").setExecutor(new CommandBug());
