@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.spacegeek224.AdminTools</groupId>
   <artifactId>AdminTools</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.5</version>
   <build>
 		<plugins>
 			<plugin>
@@ -23,7 +23,7 @@
 							<target>
 								<copy
 									file="${project.build.directory}/${project.build.finalName}.jar"
-									todir="../server/plugins" />
+									todir="/Users/marisusis/Desktop/spigottest/plugins" />
 							</target>
 						</configuration>
 						<goals>
