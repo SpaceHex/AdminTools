@@ -25,7 +25,7 @@ public class CommandShout implements CommandExecutor {
 			for (int i = 1; i < args.length; i++) {
 				buffer.append(' ').append(args[i]);
 			}
-			Bukkit.broadcastMessage(name + buffer.toString())
+			Bukkit.broadcastMessage(name + buffer.toString());
                 }
                 return true;                                                                                            
         }                                                                                                                
