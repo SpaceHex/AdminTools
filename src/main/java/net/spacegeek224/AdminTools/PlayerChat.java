@@ -36,7 +36,7 @@ public class PlayerChat implements Listener {
   if (player.hasPermission("rank.admin")) {
      Bukkit.broadcastMessage(ChatColor.RED + player.getDisplayName() + ": " + ChatColor.WHITE + msg);
    } else {
-     Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + msg);
+     Bukkit.broadcastMessage(ChatColor.WHITE + player.getDisplayName() + ": " + ChatColor.GRAY + new ColoredString(msg).res);
    }
    
   }
