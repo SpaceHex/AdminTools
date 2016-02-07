@@ -62,13 +62,6 @@
 
 	<dependencies>
 		<dependency>
-		    <groupId>net.spacegeek224.hexlib</groupId>
-		    <artifactId>HexLib</artifactId>
-		    <version>0.0.1</version>
-		    <scope>system</scope>
-		    <systemPath>${project.basedir}/src/main/resources/HexLib.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
 			<version>1.8-R0.1-SNAPSHOT</version>
